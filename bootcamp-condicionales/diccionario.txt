@@ -1,0 +1,111 @@
+
+Perfecto 👍 Vamos con **diccionarios en Python** — uno de los tipos de datos más importantes y útiles.
+
+---
+
+## 🧩 ¿Qué es un diccionario?
+
+Un **diccionario (`dict`)** es una estructura que almacena **pares clave-valor**.
+Cada **clave** debe ser única, y sirve para acceder a su **valor**.
+
+```python
+persona = {
+    "nombre": "Moralens",
+    "edad": 26,
+    "pais": "República Dominicana"
+}
+```
+
+Aquí:
+
+* `"nombre"`, `"edad"` y `"pais"` son las **claves**.
+* `"Moralens"`, `26` y `"República Dominicana"` son los **valores**.
+
+---
+
+## 🧠 Cómo acceder a los valores
+
+```python
+print(persona["nombre"])  # Moralens
+```
+
+Si la clave **no existe**, genera un `KeyError`.
+Por eso se suele usar `get()`:
+
+```python
+print(persona.get("profesion", "No especificada"))  # No especificada
+```
+
+---
+
+## 🛠️ Funciones y métodos comunes de diccionarios
+
+| Método / Función                    | Descripción                                     | Ejemplo                                                    |
+| ----------------------------------- | ----------------------------------------------- | ---------------------------------------------------------- |
+| `len(dic)`                          | Devuelve cuántos pares clave-valor hay.         | `len(persona)` → `3`                                       |
+| `dic.keys()`                        | Devuelve una vista con las claves.              | `persona.keys()` → `dict_keys(['nombre', 'edad', 'pais'])` |
+| `dic.values()`                      | Devuelve una vista con los valores.             | `persona.values()`                                         |
+| `dic.items()`                       | Devuelve pares `(clave, valor)` en tuplas.      | `persona.items()`                                          |
+| `dic.get(clave, valor_por_defecto)` | Evita errores si la clave no existe.            | `persona.get('ciudad', 'N/A')`                             |
+| `dic.pop(clave)`                    | Elimina una clave y devuelve su valor.          | `persona.pop('edad')`                                      |
+| `dic.popitem()`                     | Elimina y devuelve el último par añadido.       | `persona.popitem()`                                        |
+| `dic.clear()`                       | Elimina todo el contenido.                      | `persona.clear()`                                          |
+| `dic.copy()`                        | Crea una copia superficial del diccionario.     | `copia = persona.copy()`                                   |
+| `dic.update(otro_dic)`              | Añade o actualiza valores con otro diccionario. | `persona.update({"edad": 27})`                             |
+| `clave in dic`                      | Verifica si una clave existe.                   | `'nombre' in persona` → `True`                             |
+
+---
+
+## 🧱 Crear diccionarios de diferentes formas
+
+```python
+# Usando llaves
+a = {"x": 1, "y": 2}
+
+# Con dict() y pares clave-valor
+b = dict(nombre="Moralens", edad=26)
+
+# Desde listas o tuplas
+c = dict([("nombre", "Ana"), ("edad", 22)])
+```
+
+---
+
+## 🔁 Recorrer un diccionario
+
+```python
+for clave in persona:
+    print(clave, persona[clave])
+```
+
+O más completo:
+
+```python
+for clave, valor in persona.items():
+    print(f"{clave}: {valor}")
+```
+
+---
+
+## 🧮 Ejemplo práctico
+
+```python
+productos = {
+    "manzana": 1.2,
+    "banana": 0.8,
+    "naranja": 1.5
+}
+
+# Actualizar valor
+productos["banana"] = 1.0
+
+# Agregar nuevo
+productos["pera"] = 1.3
+
+# Recorrer
+for fruta, precio in productos.items():
+    print(f"{fruta}: ${precio}")
+```
+
+---
+
