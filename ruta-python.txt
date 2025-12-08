@@ -1,0 +1,16 @@
+Estructuras de datos y algoritmos:
+1) Arreglos y listas enlasadas
+a) Heaps
+b) Colas
+C) Pilas
+2) Tablas Hash
+3) Arboles binarios de busqueda
+4) Recursion
+5) Algoritmos de ordenamiento
+6 Regex
+7) Iteradores
+8) Decoradores
+9) Lambdas
+10) Modulos
+11) Compresion de listas
+12) Expresiones generadoras
